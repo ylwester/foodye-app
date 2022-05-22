@@ -14,21 +14,34 @@ const BottomNavigation = () => {
       <Tab.Navigator
         screenOptions={() => ({
           tabBarLabelStyle: {
-            fontFamily: 'Poppins_400Regular'
+            fontFamily: 'Poppins_400Regular',
+            color: '#05182B'
           }
         })}>
         <Tab.Screen
           name="Home"
           component={HomeScreen}
-          options={{
-            tabBarIcon: () => <Icon name="ios-home-outline" size={24} />
-          }}
+          options={() => ({
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                color="#05182B"
+                name={focused ? 'ios-home' : 'ios-home-outline'}
+                size={24}
+              />
+            )
+          })}
         />
         <Tab.Screen
           name="Recipes"
           component={RecipesScreen}
           options={{
-            tabBarIcon: () => <Icon name="restaurant-outline" size={24} />
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                color="#05182B"
+                name={focused ? 'restaurant' : 'restaurant-outline'}
+                size={24}
+              />
+            )
           }}
         />
         <Tab.Screen
@@ -41,7 +54,13 @@ const BottomNavigation = () => {
         />
         <Tab.Screen
           options={{
-            tabBarIcon: () => <Icon name="ios-search" size={24} />
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                color="#05182B"
+                name={focused ? 'ios-search' : 'ios-search-outline'}
+                size={24}
+              />
+            )
           }}
           name="Browse"
           component={RecipesScreen}
@@ -50,7 +69,13 @@ const BottomNavigation = () => {
           name="Profile"
           component={RecipesScreen}
           options={{
-            tabBarIcon: () => <Icon name="person-outline" size={24} />
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                color="#05182B"
+                name={focused ? 'ios-person' : 'person-outline'}
+                size={24}
+              />
+            )
           }}
         />
       </Tab.Navigator>

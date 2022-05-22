@@ -2,7 +2,7 @@ import React from 'react'
 import { ITextProps, Text } from 'native-base'
 
 type Props = {
-  children: React.ReactChild
+  children: React.ReactNode
 } & ITextProps
 
 const DefaultText: React.FC<Props> = ({ children, ...props }) => {
