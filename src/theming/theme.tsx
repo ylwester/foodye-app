@@ -1,6 +1,29 @@
 import { extendTheme } from 'native-base'
 
-const theme = extendTheme({
+const customTheme = extendTheme({
+  colors: {
+    custom: {
+      0: '#ffffff',
+      10: '#a9abb2',
+      20: '#7d808a',
+      50: '#454a58',
+      100: '#040216'
+    }
+  },
+  components: {
+    Text: {
+      baseStyle: () => {
+        return {
+          _light: {
+            color: 'custom.100'
+          },
+          _dark: {
+            color: 'custom.10'
+          }
+        }
+      }
+    }
+  },
   fontConfig: {
     Poppins: {
       100: {
@@ -40,4 +63,4 @@ const theme = extendTheme({
   }
 })
 
-export default theme
+export default customTheme

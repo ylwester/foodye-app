@@ -3,7 +3,7 @@ import React from 'react'
 import BottomNavigation from './src/components/bottom-navigation/index'
 import { NativeBaseProvider } from 'native-base'
 
-import theme from './src/theming/theme'
+import customTheme from './src/theming/theme'
 import {
   useFonts,
   Poppins_100Thin,
@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <>
-      <NativeBaseProvider theme={theme}>
+      <NativeBaseProvider theme={customTheme}>
         <BottomNavigation />
       </NativeBaseProvider>
     </>
