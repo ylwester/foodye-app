@@ -36,6 +36,7 @@ const BottomNavigation = () => {
           name="Home"
           component={HomeScreen}
           options={({ route }) => ({
+            headerShown: false,
             tabBarLabel: ({ focused }) => (
               <DefaultText
                 fontWeight={focused ? 'semibold' : 'normal'}
